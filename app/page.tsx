@@ -15,7 +15,7 @@ const filterItems = list.filter((prev) => {
 
 
 // button Function
-const handleClick = (e: React.ChangeEvent<any>) => {
+const handleClick = (e:any) => {
   e.preventDefault();
   let itemVal= valRef.current.value;
 
@@ -57,8 +57,11 @@ const handleClick = (e: React.ChangeEvent<any>) => {
 
  List:
  <ul>
-{filterItems.map((prev:any) => {
+{/* {filterItems.map((prev:any) => {
   return <li key={prev.id}>{prev}</li>
+})} */}
+{list.map(prev => {
+  return prev
 })}
 </ul>
  </form>
