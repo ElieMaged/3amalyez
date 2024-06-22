@@ -9,7 +9,8 @@ const [query, setQuery] = useState('')
 const valRef = useRef()
 
 const filterItems = list.filter((prev) => {
-  return prev.toLowerCase().includes(query.toLowerCase())
+  // return prev.toLowerCase().includes(query.toLowerCase())
+  return prev
 })
 
 
