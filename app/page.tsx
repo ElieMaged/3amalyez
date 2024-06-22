@@ -3,10 +3,10 @@ import Image from "next/image";
 import {useRef, useEffect, useState} from 'react'
 
 export default function Home() {
-const [list, setList] = useState([]);
+const [list, setList] = useState(['']);
 const [query, setQuery] = useState('')
 
-const valRef = useRef()
+const valRef:any = useRef()
 
 const filterItems = list.filter((prev) => {
   // return prev.toLowerCase().includes(query.toLowerCase())
@@ -15,10 +15,10 @@ const filterItems = list.filter((prev) => {
 
 
 // button Function
-const handleClick = (e) => {
+const handleClick = (e: React.ChangeEvent<any>) => {
   e.preventDefault();
   let itemVal= valRef.current.value;
-  if(itemVal === '') return;
+
   setList(prev => {
     return [...prev, itemVal]
   })
@@ -57,8 +57,8 @@ const handleClick = (e) => {
 
  List:
  <ul>
-{filterItems.map((prev) => {
-  return <li>{prev}</li>
+{filterItems.map((prev:any) => {
+  return <li key={prev.id}>{prev}</li>
 })}
 </ul>
  </form>
