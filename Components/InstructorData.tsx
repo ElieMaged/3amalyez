@@ -7,6 +7,7 @@ const Data = [
         Job: 'Business Toad',
         img: 'https://i.imgur.com/NxISWOG.png',
         desc: 'Pepe the Frog, once a beloved internet meme, has reinvented himself as a shrewd and successful businessman. '
+        
 
     },
 
