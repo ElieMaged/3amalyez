@@ -17,8 +17,8 @@ const valRef:any = useRef()
 const handleClick = (e:any) => {
   e.preventDefault();
   let itemVal= valRef.current.value;
-  if(itemVal === '') return;
-  setList((prev) => {
+ 
+  setList(prev => {
     return [...prev, itemVal]
   })
   valRef.current.value='';
