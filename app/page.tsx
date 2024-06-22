@@ -6,7 +6,6 @@ export default function Home() {
 const [list, setList] = useState([]);
 const [query, setQuery] = useState('')
 
-let selectVal = document.getElementById('mySelect');
 
 
 const filterItems = list.filter(prev => {
