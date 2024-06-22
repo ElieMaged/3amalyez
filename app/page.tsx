@@ -9,7 +9,8 @@ const [query, setQuery] = useState('')
 
 
 const filterItems = list.filter(prev => {
-  return prev})
+  const pepe =  prev.toLowerCase();
+   pepe.includes(query.toLowerCase())})
 
 const valRef:any = useRef()
 // button Function
