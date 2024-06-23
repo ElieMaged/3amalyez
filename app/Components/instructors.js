@@ -6,7 +6,8 @@ const instructors =  [
         courses: "Business",
         price: "0",
         img:"https://pbs.twimg.com/media/F_3cCa9WcAAGKkF.jpg",
-        id:1
+        id:1,
+        courseTag:'BUS'
     },
     {
         name: "Harambe",
@@ -15,7 +16,8 @@ const instructors =  [
         courses: "Medicine",
         price: "500",
         img:"https://ichef.bbci.co.uk/news/976/cpsprodpb/D2D2/production/_118707935_untitled-1.jpg",
-        id:2
+        id:2,
+        courseTag:'MED'
     },
     {
         name: "Haru",
@@ -24,7 +26,8 @@ const instructors =  [
         courses: "Woof Woof?",
         price: "100",
         img:"https://media.istockphoto.com/id/168362733/photo/english-cocker-spaniel.jpg?s=612x612&w=0&k=20&c=FeDtTQrcejqCc1bpuvhI3flpsonqP9M-P1GkTXdTE50=",
-        id:3
+        id:3,
+        courseTag:'WOOF'
     },
     {
         name: "Shrek",
@@ -33,7 +36,8 @@ const instructors =  [
         courses: "Rizzardry",
         price: "50",
         img:"https://i.redd.it/t8pxmqcmysf61.jpg",
-        id:4
+        id:4,
+        courseTag:'RIZZ'
     },
     {
         name: "Arty",
@@ -42,7 +46,8 @@ const instructors =  [
         courses: "Satanism",
         price: "200",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKK1zSX_YjOvNSHlqwuy84X_WMWRSHNigzpA&s",
-        id:5
+        id:5,
+        courseTag:'SATAN'
     }
 
 ]
