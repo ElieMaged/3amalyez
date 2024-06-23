@@ -30,8 +30,9 @@ const valRef:any = useRef()
 
 
 
-{list.map(({name, occupation, country, courses, price, img}) => {
+{list.map(({name, occupation, country, courses, price, img, id}) => {
   return <Card
+  key={id}
   name={name}
  img={img}
  occupation={occupation}
