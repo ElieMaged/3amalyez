@@ -1,4 +1,4 @@
-export default function Card({name, img, desc}) {
+export default function Card({name, occupation, country, courses, price, img}) {
     return(
      <>
 
@@ -6,7 +6,10 @@ export default function Card({name, img, desc}) {
     <img class="object-cover w-24 rounded-t-lg  md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={img} alt=""/>
     <div class="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{desc}.</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{occupation}.</p>
+        <h6>Teaches {courses}</h6>       
+        <p>{price}$ per lesson</p>
+        <p>lives in {country}</p>
     </div>
 </a>
 
