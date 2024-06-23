@@ -1,70 +1,53 @@
 'use client'
 import Image from "next/image";
 import {useRef, useEffect, useState} from 'react'
+import { promises as fs } from 'fs';
+import ins from './Components/instructors'
+import Card from './Components/Card'
+
 
 export default function Home() {
-const [list, setList] = useState(['']);
+  const mappy = ins.map((prev) => prev)
+
+const [list, setList] = useState(mappy);
 const [query, setQuery] = useState('')
+
+
+
 
 const valRef:any = useRef()
 
-const filterItems = list.filter((prev) => {
-  return prev.toLowerCase().includes(query.toLowerCase())
-  // return prev
-})
 
 
-// button Function
-const handleClick = (e:any) => {
-  e.preventDefault();
-  let itemVal= valRef.current.value;
 
-  setList(prev => {
-    return [...prev, itemVal]
-  })
-  valRef.current.value='';
 
-}
 
-  
+
+
   return (
   <main className=" ">
 
- <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose an option</label>
-  <select value ={query} id='mySelect' onChange={e=> setQuery(e.target.value)}  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-    <option value='' selected>Choose a country</option>
-    <option value="Egypt">Egypt</option>
-    <option value="UAE">UAE</option>
-    <option value="Saudi Arabia">Saudi Arabia</option>
-   </select>
 
-<form className="max-w-sm mx-auto">
 
-</form>
 
- <datalist>
-  <option>
-    Hello
-  </option>
- </datalist>
+{list.map(({name, occupation, country, courses, price, img}) => {
+  return <Card
+  name={name}
+ img={img}
+ occupation={occupation}
+ price={price}
+ country = {country}
+ courses = {courses}
+ 
+  />
+}
+)}
 
-<br />
-<br />
-    <form>
- Add List:<input ref={valRef} className='text-black' type='text'/> <button onClick={handleClick}>Add</button>
- <br />
- <br />
 
- List:
- <ul>
-{filterItems.map((prev:any) => {
-  return <li key={prev.id}>{prev}</li>
-})}
-{/* {list.map(prev => {
-  return prev
-})} */}
-</ul>
- </form>
+
+
+
+
 
   </main>
   );
