@@ -62,8 +62,8 @@ const valRef:any = useRef()
 </select>
 {/* price filter */}
 {price}
-<input onChange={e => setPrice(e.target.value)} className='text-white w-120' min='0' max='500' type='range' id='price' name='price'></input>
-<label for='price'>Price</label>
+{/* <input onChange={e => setPrice(e.target.value)} className='text-white w-120' min='0' max='500' type='range' id='price' name='price'></input>
+<label for='price'>Price</label> */}
 </span>
 
 
