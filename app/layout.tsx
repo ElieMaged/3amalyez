@@ -17,13 +17,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (           
+  return (     
+
     <html lang="en">  
       <body>
         <Nav />
      {children}
       </body>
     </html>
-
+  
   );
 }
