@@ -5,6 +5,8 @@ import { promises as fs } from 'fs';
 import ins from './Components/instructors'
 import Card from './Components/Card'
 import MultiRangeSlider from "multi-range-slider-react";
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+
 
 
 
