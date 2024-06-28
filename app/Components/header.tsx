@@ -16,12 +16,12 @@ export const Header = ({
 }: HeaderProps) => {
     return(
         <div className="w-full flex flex-col gap-y-4 items-center justify-center text-3xl font-semibold">
-<h1>
-    Auth 🔒
+<h1 className='items-center justify-center'>
+    Log in
 </h1>
-<p className='text-muted-foreground text-sm'>
+<div className='text-muted-foreground text-sm'>
  {label}
-</p>
+</div>
         </div>
     )
 

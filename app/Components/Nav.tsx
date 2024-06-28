@@ -2,6 +2,7 @@ import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@c
 import {LoginButton}from '../Components/login-button'
 
 
+
 export default function Nav() {
     return(
         <>

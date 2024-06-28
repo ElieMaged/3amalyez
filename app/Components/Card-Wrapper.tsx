@@ -28,8 +28,8 @@ export const CardWrapper = ({
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white justify-center align-center">Auth 🔒</h5>
         </div>
     </a>
-    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{headerLabel}</p>
-    <p>{children}</p>
+    <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">{headerLabel}</div>
+    <div>{children}</div>
     {showSocial && (
         
         <Social />    
