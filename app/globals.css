@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.multi-range-slider-container {
+  max-width: 2000px;
+  margin: 1em;
+  width:30em;
+}
+
