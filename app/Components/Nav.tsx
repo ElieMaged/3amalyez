@@ -42,15 +42,6 @@ export default function Nav() {
         </li> */}
 
 
-        {/* <ClerkProvider>
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-        </ClerkProvider> */}
-
 
       </ul>
     </div>
