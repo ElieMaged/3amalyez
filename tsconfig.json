@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/auth/[...nextauth].js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/paypal/auth/[...nextauth].js", "app/Components/Card-Instructor.jsx", "app/Components/Card-Instructor.jsx", "app/Components/Card-Instructor.jsx", "app/paypal/signature.js", "app/Components/ZoomComp.js"],
   "exclude": ["node_modules"]
 }
