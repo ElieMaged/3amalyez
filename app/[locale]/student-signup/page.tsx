@@ -1,9 +1,10 @@
 'use client'
 
-
 export default function studentSignup() {
+ 
     return(
         <>
+      
   <div className='flex flex-row text-black justify-center'>
 <form className="max-w-md mx-auto"> 
 <div className="grid md:grid-cols-2 md:gap-6 mt-5">
