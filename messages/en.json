@@ -24,5 +24,8 @@
 "code":"Country Code",
 "phone":"Phone Number",
 "country":"Country"
+  },
+  "Switcher":{
+    "lang":"English"
   }
 }

@@ -27,7 +27,7 @@ console.log(t('title'))
           <br ></br><span className='text-xl'>{t('desc3')}</span>
           <br  /> <span className='text-xl'>{t('or')}</span> 
           <br  /> <span className='text-xl'>{t('desc4')}</span>
-          <br  /> <span className='text-2xl'>{t('desc5')}</span>
+          <br  /> <span className='text-xl'>{t('desc5')}</span>
           </div>
        <h1 className='text-2xl mb-5'>Coming Soon</h1>
    
