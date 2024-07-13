@@ -1,8 +1,9 @@
 
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from '../Components/Nav'
+import { Inter } from 'next/font/google'
+
 
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
@@ -10,7 +11,8 @@ import { useTranslations } from 'next-intl'
 
 
 
-// const inter = Inter({ subsets: ["latin"] });
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   
@@ -30,9 +32,10 @@ export default async function RootLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+
   return (     
- 
-    <html lang={locale}>  
+
+    <html lang={locale} className={inter.className}>  
       <body>
        <NextIntlClientProvider messages={messages}>
         <Nav />
@@ -40,6 +43,6 @@ export default async function RootLayout({
        </NextIntlClientProvider>
       </body>
     </html>
-
+  
   );
 }
