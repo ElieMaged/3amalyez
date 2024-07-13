@@ -1,11 +1,16 @@
 'use client'
 import  Link  from 'next/link'
 import { useTranslations } from 'next-intl'
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 
 
-export default function Home() {
+
+export default function Home({params:{locale}}:any) {
+
+  
 const t = useTranslations('Index')
+const lang = t('lang')
 
 const handleSubmit = () => {
   console.log('Translation function:', t);
@@ -33,13 +38,13 @@ console.log(t('title'))
    
 
        <Link 
-    href='/student-signup'
+    href={`${lang}/student-signup`}
     className='text-white font-bold py-2 px-4 border rounded mb-5 cardy'>{t('student')}</Link>
     <br />
      <h2 className='mb-3 mt-3'>{t('or')}</h2>
    
     <Link 
-    href='/mentor-signup'
+    href={`${lang}/mentor-signup`}
     className='text-white font-bold py-2 px-4 border rounded mb-5 cardy'>{t('mentor')}</Link>
     <br></br>
     <br></br>
