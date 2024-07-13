@@ -6,24 +6,21 @@ import {unstable_setRequestLocale} from 'next-intl/server';
 
 
 
-export default function Home({params:{locale}}:any) {
 
-  
+
+export default function Home({Component, pageProps, params:{locale}}:any) {
+
+  // translation for nav
 const t = useTranslations('Index')
 const lang = t('lang')
 
-const handleSubmit = () => {
-  console.log('Translation function:', t);
-  console.log('Attempted translation:', t('title'));
-console.log(t('title'))
-}
-
   return (
- <>
+// page text
+
   <div className="flex flex-row text-center justify-center">
       <div className='justify-items-center '>
        <iframe className='m-auto mt-5' width="560" height="315" src="https://www.youtube.com/embed/1s_QGiK-8JM?si=5zX3j1i3y7jfWxEZ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-       <div className='mt-4 mb-5 max-w-96 m-auto'>
+       <div className='mt-4 mb-5 max-w-100 m-auto'>
        
        <span className='text-xl'> {t('desc')} </span>
         <br></br>
@@ -36,21 +33,26 @@ console.log(t('title'))
           </div>
        <h1 className='text-2xl mb-5'>Coming Soon</h1>
    
+{/* nav buttons */}
 
+
+  {/* student nav */}
        <Link 
-    href={`3amalycourses.com/${lang}/student-signup`}
-    className='text-white font-bold py-2 px-4 border rounded mb-5 cardy'>{t('student')}</Link>
+    href={`${lang}/student-signup`}
+    className='text-white py-2 px-4 border rounded mb-5 cardy text-xl'>{t('student')}</Link>
     <br />
      <h2 className='mb-3 mt-3'>{t('or')}</h2>
-   
+
+
+   {/* mentor nav */}
     <Link 
-    href={`3amalycourses.com/${lang}/mentor-signup`}
-    className='text-white font-bold py-2 px-4 border rounded mb-5 cardy'>{t('mentor')}</Link>
+    href={`${lang}/mentor-signup`}
+    className='text-white py-2 px-4 border rounded mb-5 cardy text-xl'>{t('mentor')}</Link>
     <br></br>
     <br></br>
       </div>
     </div>
   
-  </>
+    
   );
 }
