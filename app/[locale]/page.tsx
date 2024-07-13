@@ -38,13 +38,13 @@ console.log(t('title'))
    
 
        <Link 
-    href={`${lang}/student-signup`}
+    href={`3amalycourses.com/${lang}/student-signup`}
     className='text-white font-bold py-2 px-4 border rounded mb-5 cardy'>{t('student')}</Link>
     <br />
      <h2 className='mb-3 mt-3'>{t('or')}</h2>
    
     <Link 
-    href={`${lang}/mentor-signup`}
+    href={`3amalycourses.com/${lang}/mentor-signup`}
     className='text-white font-bold py-2 px-4 border rounded mb-5 cardy'>{t('mentor')}</Link>
     <br></br>
     <br></br>
