@@ -28,5 +28,10 @@
   },
   "Switcher":{
     "lang":"English"
+  },
+  "Logos":{
+    "diamond":"Premium Service",
+    "dollar":"Affordable Prices",
+    "thumbs":"Certified Mentors"
   }
 }
