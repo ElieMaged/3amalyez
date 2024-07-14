@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import type { FieldValues } from 'react-hook-form'
 
 
-export default function studentSignup() {
+export default function StudentSignup() {
 
     const onSubmit = async (data: FieldValues) => {
 sendEmail(data)

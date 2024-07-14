@@ -19,7 +19,7 @@ export const sendEmail = async(data:any) => {
     const country = `${data.country}`
     await resend.emails.send({
         from: 'Hey Fouad! <onboarding@resend.dev>',
-        to: 'elie1400674@gmail.com',
+        to: '3amalycourses@gmail.com',
         subject: "message from ELIE UwU",
         reply_to: email as string,
         react: <MentorEmail
