@@ -6,6 +6,8 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod';
 import type {FieldValues} from 'react-hook-form'
 import { z } from 'zod';
+import { Resend } from 'resend';
+import { sendEmail } from '@/app/Components/email/mentor'
 
 
 
@@ -13,7 +15,8 @@ const myError = new z.ZodError([]);
 
 
 export default function InstSign() {
-    const t = useTranslations('Form');
+
+const t = useTranslations('Form');
 type FormFields = {
     email: string;
     expertise: string;
@@ -58,7 +61,7 @@ const {
 const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
 
 await new Promise((resolve) => setTimeout(resolve, 1000));
-console.log(data);
+sendEmail(data)
 console.log(data);
 reset();
 }
