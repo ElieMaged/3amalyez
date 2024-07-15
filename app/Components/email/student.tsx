@@ -19,7 +19,8 @@ export const sendEmail = async (data: any) => {
 
   await resend.emails.send({
 from: 'Hello Fouad! <onboarding@resend.dev>',
-to: 'elie1400674@gmail.com',
+to: '3amalycourses@gmail.com',
+
 subject: "message from ELIE UwU",
 reply_to: email,
 // text: `I am signing up as a Learner
