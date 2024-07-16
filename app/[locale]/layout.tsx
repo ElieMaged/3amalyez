@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from '../Components/Nav'
-import { Inter } from 'next/font/google'
+import { Alexandria } from 'next/font/google'
 
 
 import {NextIntlClientProvider} from 'next-intl';
@@ -12,7 +12,7 @@ import { useTranslations } from 'next-intl'
 
 
 
-const inter = Inter({ subsets: ["latin"] });
+const alexandria = Alexandria({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   
@@ -35,7 +35,7 @@ export default async function RootLayout({
 
   return (     
 
-    <html lang={locale} className={inter.className}>  
+    <html lang={locale} className={alexandria.className}>  
       <body>
        <NextIntlClientProvider messages={messages}>
         <Nav />
