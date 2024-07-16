@@ -83,13 +83,13 @@ const l = useTranslations('Logos')
 
   {/* student nav */}
   <StudentSignup />
- <h2 className='mb-6 mt-0 text-2xl'>{t('or')}</h2>
+ <h2 className='mb-6 mt-0 text-xl block'>{t('or')}</h2>
 
    {/* mentor nav */}
    
     <Link 
     href={`${lang}/mentor-signup`}
-    className='text-white py-2 px-4 border rounded mb-5 cardy text-2xl'>{t('mentor')}</Link>
+    className='block text-white py-2 px-4 border rounded mb-5 cardy text-2xl md:inline'>{t('mentor')}</Link>
 
     <br className='mb-20 md:mb-0'></br>
     <br className='mb-20 md:mb-0'></br>
