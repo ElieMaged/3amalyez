@@ -55,3 +55,15 @@ background-color:#ffffff;
 .cardy-2:hover {
 background-color: #c9c9c9;
 }
+
+@media (prefers-color-scheme: dark) {
+  .iti {
+    --iti-border-color: #000000;
+    
+    /* --iti-dialcode-color: #999999;
+    --iti-dropdown-bg: #0d1117;
+    --iti-arrow-color: #aaaaaa;
+    --iti-hover-color: #30363d; */
+
+  }
+}

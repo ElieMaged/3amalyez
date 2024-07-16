@@ -24,9 +24,7 @@ import {
   export default function studentStyle({firstLast, email, phone, interests }:ContactFormEmailProps) {
     return(
         <Html>
-          <Head 
-          
-          />
+          <Head/>
           <Preview>Student Signup!</Preview>
           <Tailwind>
             <Body className='bg-gray-100'>
