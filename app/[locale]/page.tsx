@@ -68,6 +68,7 @@ const l = useTranslations('Logos')
 
 
 </div>
+
 {/* Second description */}
 
           <br /><span className='text-2xl md:text-3xl'>{t('or')}</span> 
@@ -88,7 +89,7 @@ const l = useTranslations('Logos')
    
     <Link 
     href={`${lang}/mentor-signup`}
-    className='text-white py-2 px-4 border rounded mb-5 cardy text-2xl'>{t('mentor')}</Link>
+    className='text-white py-2 px-4 border rounded mb-5 cardy text-xl'>{t('mentor')}</Link>
 
     <br></br>
     <br></br>
