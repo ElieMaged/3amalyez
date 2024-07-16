@@ -28,10 +28,10 @@ const l = useTranslations('Logos')
 
   <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center">
       <div className='justify-items-center'>
-          <br /><span className='text-2xl sm:text-4xl'>{t('videoText1')}</span>
-          <br /><span className='text-2xl sm:text-4xl'>
+          <br /><span className='text-2xl md:text-2xl'>{t('videoText1')}</span>
+          <br /><span className='text-2xl md:text-2xl'>
            <span className='text-3xl'>{t('site')} <br /></span></span>
-          <br /><span className='text-2xl md:text-4xl'>{t('videoText3')}</span>
+          <br /><span className='text-2xl md:text-2xl'>{t('videoText3')}</span>
           <br />
           <br />
           <br /><span className='text-2xl md:text-4xl'>{t('videoText4')}</span>

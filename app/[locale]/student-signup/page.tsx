@@ -67,7 +67,7 @@ const {
         <>
       
   <div className='flex flex-row text-black justify-center'>
-<form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto" > 
+<form onSubmit={handleSubmit(onSubmit)} className="mx-auto" > 
 <div className="grid md:grid-cols-2 md:gap-2 mt-5">
 <div className="relative z-0 w-full mb-5 group">
         <input {
@@ -80,7 +80,7 @@ const {
             <p className='text-red-600'>{`${errors.lastName.message}`}</p>
         )}
     </div>
-    <div className="relative z-0 w-full mb-5 group">
+    <div className="relative z-0 w-full mb-5 group ">
         <input {
             ...register('firstName', {
                 required: "First Name is required"
@@ -93,7 +93,7 @@ const {
     </div>
     
   </div>
-  <div className="relative z-0 w-full mb-5 group">
+  <div className="relative z-0 w-full mb-5 group ">
       <input {
         ...register('email', {
             required: "Email is required",
@@ -104,7 +104,7 @@ const {
             <p className='text-red-600'>{`${errors.email.message}`}</p>
         )}
   </div>
-  <div className="relative z-0 w-full mb-5 group">
+  <div className="relative z-0 w-full mb-5 group ">
       <input {
         ...register('interests', {
             required: "Interests are required"
@@ -127,7 +127,7 @@ inputProps={{
 
   </div>
   
-  <div className="relative z-0 w-full mb-5 group">
+  <div className="relative z-0 w-full mb-5 group ">
   </div>
   <button disabled={isSubmitting} type="submit" className="text-white py-2 px-4 border rounded mb-5 cardy text-2xl">قم بالتسجيل كمتعلم</button>
 </form>
