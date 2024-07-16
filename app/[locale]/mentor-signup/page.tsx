@@ -71,11 +71,10 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
     //   data reset
       const dataStuff = await response.json();
       setNumber('')
-       reset();
+      reset();
        alert('Your application has been sent!')
        console.log(data);
-       console.log(data);
-       reset();
+
 }
 
 
@@ -104,10 +103,15 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
     
     
     
-    <div className="relative z-0 w-full mb-5 group w-1/4">
+    <div className="md:relative z-0 md:w-full mb-5 group">
     <label className=''>رقم التليفون</label>
-    <span className='max-w-1/4'>
+<span className=''>
 <PhoneInput
+containerClass=''
+inputClass=''
+buttonClass=''
+dropdownClass=''
+searchClass=''
 country={'eg'}
 value={number}
 onChange={handleChange}
