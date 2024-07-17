@@ -57,8 +57,8 @@ const {
     defaultValues: {}
 
 });
- 
-// send to sheets API
+
+ //onSubmit
 const onSubmit: SubmitHandler<FormFields> = async (data: FieldValues) => {
     try {
       const response = await fetch('https://3amalycourses.com/ar/api/mentor', {
@@ -70,11 +70,22 @@ const onSubmit: SubmitHandler<FormFields> = async (data: FieldValues) => {
         body: JSON.stringify({ ...data, number })
       });
   
+      const responseText = await response.text(); // Get the raw response text
+      console.log('Raw response:', responseText); // Log the raw response
+  
+      let result;
+      try {
+        result = JSON.parse(responseText); // Attempt to parse the response
+      } catch (parseError) {
+        console.error('JSON Parse Error:', parseError);
+        console.error('Response that failed to parse:', responseText);
+        throw new Error('Failed to parse server response');
+      }
+  
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
   
-      const result = await response.json();
       console.log('Success:', result);
       // Handle success (e.g., show a success message to the user)
     } catch (error) {
@@ -82,7 +93,6 @@ const onSubmit: SubmitHandler<FormFields> = async (data: FieldValues) => {
       // Handle error (e.g., show an error message to the user)
     }
   };
-
 
 
 
