@@ -79,7 +79,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
     alert('Your application has been sent!')
     console.log(data);
   } catch (error) {
-    console.error('Error submitting form:', error);
+    console.error('Error submitting form:');
     alert('There was an error submitting your application. Please try again.');
   }
 }
