@@ -17,7 +17,7 @@ export default function StudentSignup() {
 
 
     const [number, setNumber]:any = React.useState('')
-    const [valid, isValid] = React.useState(true)
+    const [valid, isValid] = React.useState(false)
 
 
 // number validation
@@ -40,7 +40,7 @@ const onSubmit = async (data: FieldValues) => {
         },
         body: JSON.stringify({...data, number}),
       });
-      const dataStuff = await response.json();
+    //   const dataStuff = await response.json();
       setNumber('')
        reset();
        alert('Your application has been sent!')
