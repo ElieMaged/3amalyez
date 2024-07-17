@@ -13,11 +13,11 @@ export async function POST(request: Request) {
     const sheets = google.sheets({ version: 'v4', auth });
 
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.SHEET_ID,
+      spreadsheetId: process.env.SHEET_ID2,
       range: 'Sheet1!A1', // Change this to match your sheet name and desired range
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[`${body.firstName} ${body.lastName}`, body.email, body.interests, `${body.number}`]], // Adjust according to your form fields
+        values: [[`${body.firstName} ${body.lastName}`, body.email, body.number, body.expertise, body.years, body.languages, body.sessionPrice, body.introVid, body.country]]
       },
     });
 

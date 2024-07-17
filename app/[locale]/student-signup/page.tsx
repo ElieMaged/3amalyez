@@ -31,22 +31,20 @@ if(number.length < 7) {
  }
 }
 
-const onSubmit = async (data: FieldValues) => {
-
-    const response = await fetch('https://3amalycourses.com/ar/api/student', {
+const onSubmit = async (data:FieldValues) => {
+    const response = await fetch('/api/mentor', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({...data, number}),
       });
+    //   data reset
       const dataStuff = await response.json();
       setNumber('')
-       reset();
+      reset();
        alert('Your application has been sent!')
-       console.log(dataStuff);
-
-
+       console.log(data);
 }
 
 
