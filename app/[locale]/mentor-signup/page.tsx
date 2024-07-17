@@ -69,7 +69,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
         body: JSON.stringify({...data, number}),
       });
     //   data reset
-      const dataStuff = await response.json();
+    //   const dataStuff = await response.json();
       setNumber('')
       reset();
        alert('Your application has been sent!')
