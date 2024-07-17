@@ -59,23 +59,31 @@ const {
 });
  
 // send to sheets API
-const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
-const response = await fetch('https://3amalycourses.com/ar/api/mentor',{
-    method:'POST',
-    headers:{
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-    },
-    body:JSON.stringify({...data, number})
-})
+const onSubmit: SubmitHandler<FormFields> = async (data: FieldValues) => {
+    try {
+      const response = await fetch('https://3amalycourses.com/ar/api/mentor', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...data, number })
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const result = await response.json();
+      console.log('Success:', result);
+      // Handle success (e.g., show a success message to the user)
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error (e.g., show an error message to the user)
+    }
+  };
 
-const content = await response.json();
-console.log(content)
-alert('You application was sent successfully!')
-reset();
-setNumber('')
 
-}
 
 
     return(
