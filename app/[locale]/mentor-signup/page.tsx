@@ -61,7 +61,7 @@ const {
 // send to sheets API
 const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
 
-    const response = await fetch('/api/mentor', {
+    const response = await fetch('https://3amalycourses.com/ar/api/mentor', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
