@@ -73,7 +73,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
       setNumber('')
       reset();
        alert('Your application has been sent!')
-       console.log(data);
+       console.log(dataStuff);
 
 }
 

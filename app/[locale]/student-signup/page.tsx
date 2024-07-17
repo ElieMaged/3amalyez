@@ -40,11 +40,11 @@ const onSubmit = async (data: FieldValues) => {
         },
         body: JSON.stringify({...data, number}),
       });
-    //   const dataStuff = await response.json();
+      const dataStuff = await response.json();
       setNumber('')
        reset();
        alert('Your application has been sent!')
-       console.log(data);
+       console.log(dataStuff);
 
 
 }
