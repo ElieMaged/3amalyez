@@ -1,15 +1,15 @@
 'use client'
-import React, { useState } from 'react'
-import { sendEmail } from '../../Components/email/student'
+import {useTranslations} from 'next-intl';
+import {useState, useEffect} from 'react'
+import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import type { FieldValues } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod';
+import type {FieldValues} from 'react-hook-form'
+import { z } from 'zod';
+import { Resend } from 'resend';
+import { sendEmail } from '@/app/Components/email/mentor'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-import { GoogleSpreadsheet } from 'google-spreadsheet';
-
-
-
-
 
 
 
