@@ -24,7 +24,7 @@ const l = useTranslations('Logos')
 
 
   return (
-// page text
+// page text yay
 
   <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center">
       <div className='justify-items-center'>
