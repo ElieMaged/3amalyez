@@ -22,7 +22,7 @@ export async function POST(request: Request) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID1,
-      range: 'Students!A1', // Ensure this matches your sheet name and desired range
+      range: 'Sheet2!A1', // Ensure this matches your sheet name and desired range
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[`${body.firstName} ${body.lastName}`, body.email, body.interests, body.number]]
