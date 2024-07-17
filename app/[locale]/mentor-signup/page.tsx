@@ -59,41 +59,30 @@ const {
 });
 
  //onSubmit
-const onSubmit: SubmitHandler<FormFields> = async (data: FieldValues) => {
+ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
     try {
-      const response = await fetch('https://3amalycourses.com/ar/api/mentor', {
+      const response = await fetch('/api/mentor', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...data, number })
+        body: JSON.stringify({...data, number}),
       });
-  
-      const responseText = await response.text(); // Get the raw response text
-      console.log('Raw response:', responseText); // Log the raw response
-  
-      let result;
-      try {
-        result = JSON.parse(responseText); // Attempt to parse the response
-      } catch (parseError) {
-        console.error('JSON Parse Error:', parseError);
-        console.error('Response that failed to parse:', responseText);
-        throw new Error('Failed to parse server response');
-      }
-  
+      
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-  
-      console.log('Success:', result);
-      // Handle success (e.g., show a success message to the user)
+      
+      const dataStuff = await response.json();
+      setNumber('')
+      reset();
+      alert('Your application has been sent!')
+      console.log(data);
     } catch (error) {
-      console.error('Error:', error);
-      // Handle error (e.g., show an error message to the user)
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your application. Please try again.');
     }
-  };
-
+  }
 
 
     return(
