@@ -5,11 +5,19 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || '{}');
-const auth = new google.auth.GoogleAuth({
-  credentials,
-  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-});
+    // Parse credentials
+    const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || '{}');
+    
+    // Check if credentials are valid
+    if (!credentials.client_email || !credentials.private_key) {
+      throw new Error('Invalid Google credentials');
+    }
+
+    const auth = new google.auth.GoogleAuth({
+      credentials,
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    });
+
     const sheets = google.sheets({ version: 'v4', auth });
 
     const response = await sheets.spreadsheets.values.append({

@@ -59,30 +59,30 @@ const {
 });
 
  //onSubmit
- const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
-    try {
-      const response = await fetch('https://3amalycourses.com/ar/api/mentor', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({...data, number}),
-      });
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const dataStuff = await response.json();
-      setNumber('')
-      reset();
-      alert('Your application has been sent!')
-      console.log(data);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your application. Please try again.');
+const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
+  try {
+    const response = await fetch('https://3amalycourses.com/ar/api/mentor', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({...data, number}),
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+    
+    const dataStuff = await response.json();
+    setNumber('')
+    reset();
+    alert('Your application has been sent!')
+    console.log(data);
+  } catch (error) {
+    console.error('Error submitting form:');
+    alert('There was an error submitting your application. Please try again.');
   }
+}
 
 
     return(
