@@ -2,15 +2,19 @@ import { NextResponse } from 'next/server';
 import { google } from 'googleapis';
 
 export async function POST(request: Request) {
-
   try {
     const body = await request.json();
 
-    // Log the received body for debugging
-    console.log('Received body:', body);
+    // Parse credentials
+    const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || '{}');
+    
+    // Check if credentials are valid
+    if (!credentials.client_email || !credentials.private_key) {
+      throw new Error('Invalid Google credentials');
+    }
 
     const auth = new google.auth.GoogleAuth({
-      credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || '{}'),
+      credentials,
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
@@ -18,19 +22,18 @@ export async function POST(request: Request) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID2,
-      range: 'Sheet1!A1',
+      range: 'Sheet1!A1', // Ensure this matches your sheet name and desired range
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[`${body.firstName} ${body.lastName}`, body.email, body.number, body.expertise, body.years, body.languages, body.sessionPrice, body.introVid, body.country]]
       },
     });
 
-    // Log the Google Sheets API response for debugging
-    console.log('Google Sheets API response:', response.data);
+    console.log('Sheets API Response:', response.data);
 
-    return NextResponse.json({ message: 'Data added successfully', response: response.data });
+    return NextResponse.json({ message: 'Data added successfully', data: response.data }, { status: 200 });
   } catch (error) {
-    console.error('API error:', error);
-    return NextResponse.json({ message: 'Internal server error'|| 'Unknown error' });
+    console.error('Error in /api/mentor:', error);
+    return NextResponse.json({ message: 'Internal server error'}, { status: 500 });
   }
 }
