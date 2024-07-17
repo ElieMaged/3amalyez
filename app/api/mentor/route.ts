@@ -5,11 +5,19 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || '{}');
-const auth = new google.auth.GoogleAuth({
-  credentials,
-  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-});
+    // Parse credentials
+    const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || '{}');
+    
+    // Check if credentials are valid
+    if (!credentials.client_email || !credentials.private_key) {
+      throw new Error('Invalid Google credentials');
+    }
+
+    const auth = new google.auth.GoogleAuth({
+      credentials,
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    });
+
     const sheets = google.sheets({ version: 'v4', auth });
 
     const response = await sheets.spreadsheets.values.append({
@@ -26,6 +34,6 @@ const auth = new google.auth.GoogleAuth({
     return NextResponse.json({ message: 'Data added successfully', data: response.data }, { status: 200 });
   } catch (error) {
     console.error('Error in /api/mentor:', error);
-    return NextResponse.json({ message: 'Internal server error'}, { status: 500 });
+    return NextResponse.json({ message: 'Internal server error', error: error.message }, { status: 500 });
   }
 }
