@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { sendEmail } from '../../Components/email/student'
-import { useForm } from 'react-hook-form'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import type { FieldValues } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -14,10 +14,19 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 
 
 export default function StudentSignup() {
+    
 
 
     const [number, setNumber]:any = React.useState('')
     const [valid, isValid] = React.useState(false)
+
+    type FormFields = {
+        firstName:string
+        lastName:string 
+        email:string 
+        interests:string 
+        number:number
+    }
 
 
 // number validation
@@ -31,21 +40,31 @@ if(number.length < 7) {
  }
 }
 
-const onSubmit = async (data:FieldValues) => {
-    const response = await fetch('/api/mentor', {
+//onSubmit
+const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
+    try {
+      const response = await fetch('https://3amalycourses.com/ar/api/student', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({...data, number}),
       });
-    //   data reset
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const dataStuff = await response.json();
       setNumber('')
       reset();
-       alert('Your application has been sent!')
-       console.log(data);
-}
+      alert('Your application has been sent!')
+      console.log(data);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your application. Please try again.');
+    }
+  }
 
 
 
@@ -58,7 +77,7 @@ const {
     formState: {errors, isSubmitting},
     reset,
     getValues
-} = useForm();
+} = useForm<FormFields>();
 
  
     return(
