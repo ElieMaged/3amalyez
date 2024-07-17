@@ -5,16 +5,8 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    // Parse credentials
-    const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || '{}');
-    
-    // Check if credentials are valid
-    if (!credentials.client_email || !credentials.private_key) {
-      throw new Error('Invalid Google credentials');
-    }
-
     const auth = new google.auth.GoogleAuth({
-      credentials,
+      credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS || ''),
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
@@ -22,18 +14,16 @@ export async function POST(request: Request) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID2,
-      range: 'Sheet1!A1', // Ensure this matches your sheet name and desired range
+      range: 'Sheet1!A1', // Change this to match your sheet name and desired range
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[`${body.firstName} ${body.lastName}`, body.email, body.number, body.expertise, body.years, body.languages, body.sessionPrice, body.introVid, body.country]]
       },
     });
 
-    console.log('Sheets API Response:', response.data);
-
-    return NextResponse.json({ message: 'Data added successfully', data: response.data }, { status: 200 });
+    return NextResponse.json({ message: 'Data added successfully' }, { status: 200 });
   } catch (error) {
-    console.error('Error in /api/mentor:', error);
-    return NextResponse.json({ message: 'Internal server error'}, { status: 500 });
+    console.error(error);
+    return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
   }
 }
