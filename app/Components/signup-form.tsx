@@ -49,7 +49,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
             'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({...data, number}),
       });
       
       if (!response.ok) {

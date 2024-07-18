@@ -3,11 +3,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from '../Components/Nav'
 import { Alexandria } from 'next/font/google'
-
-
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import { useTranslations } from 'next-intl'
+import { Analytics } from "@vercel/analytics/react"
 
 
 
@@ -36,10 +35,12 @@ export default async function RootLayout({
   return (     
 
     <html lang={locale} className={alexandria.className}>  
+   
       <body>
        <NextIntlClientProvider messages={messages}>
         <Nav />
            {children}
+           <Analytics />
        </NextIntlClientProvider>
       </body>
     </html>
