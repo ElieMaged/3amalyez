@@ -46,7 +46,8 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
       const response = await fetch('https://3amalycourses.com/ar/api/send', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({...data, number}),
       });
