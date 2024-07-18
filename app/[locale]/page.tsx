@@ -6,7 +6,7 @@ import Image from 'next/image'
 import thumbs from '@/media/thumbs.svg'
 import dollar from '@/media/dollar.svg'
 import diamond from '@/media/diamond.svg'
-import StudentSignup from '@/app/[locale]/student-signup/page'
+import Signup from '@/app/Components/signup-form'
 
 
 
@@ -81,19 +81,8 @@ const l = useTranslations('Logos')
   {/* nav buttons */}
 
 
-  {/* student nav */}
-  <StudentSignup />
- <h2 className='mb-6 mt-0 text-xl block'>{t('or')}</h2>
-
-   {/* mentor nav */}
-   
-    <Link 
-    href={`${lang}/mentor-signup`}
-    className='block text-white py-2 px-4 border rounded mb-5 cardy text-2xl md:inline'>{t('mentor')}</Link>
-
-    <br className='mb-20 md:mb-0'></br>
-    <br className='mb-20 md:mb-0'></br>
-
+  {/* Signup Nav */}
+<Signup />
 
       </div>
     </div>
