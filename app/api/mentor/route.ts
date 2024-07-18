@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     const sheets = google.sheets({ version: 'v4', auth });
 
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.SHEET_ID_TWO,
+      spreadsheetId: process.env.SHEET_ID,
       range: 'Sheet1!A1', // Ensure this matches your sheet name and desired range
       valueInputOption: 'USER_ENTERED',
       requestBody: {
