@@ -3,9 +3,6 @@ import  Link  from 'next/link'
 import { useTranslations } from 'next-intl'
 import {unstable_setRequestLocale} from 'next-intl/server';
 import Image from 'next/image'
-import thumbs from '@/media/thumbs.svg'
-import dollar from '@/media/dollar.svg'
-import diamond from '@/media/diamond.svg'
 import Signup from '@/app/Components/signup-form'
 
 
