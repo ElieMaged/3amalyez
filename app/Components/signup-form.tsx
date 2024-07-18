@@ -43,13 +43,13 @@ if(number.length < 7) {
 //onSubmit
 const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
     try {
-      const response = await fetch('https://3amalycourses.com/ar/api/send', {
+      const response = await fetch('https://3amalycourses.com/ar/api/send/route', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({...data, number}),
+        body: JSON.stringify(data),
       });
       
       if (!response.ok) {
