@@ -11,7 +11,10 @@ import Signup from '@/app/Components/signup-form'
 
 
 
+
 export default function Home({Component, pageProps, params:{locale}}:any) {
+
+ 
 
   // translation for nav
 const t = useTranslations('Index')
@@ -22,26 +25,36 @@ const l = useTranslations('Logos')
 
   return (
 // page text yay
+<>
 
-  <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center">
-      <div className='justify-items-center'>
-          <br /><span className='text-2xl md:text-2xl'>{t('videoText1')}</span>
-          <br /><span className='text-2xl md:text-2xl'>
-           <span className='text-3xl'>{t('site')} <br /></span></span>
-          <br /><span className='text-2xl md:text-2xl'>{t('videoText3')}</span>
+  <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center entirePage">
+      <div className='bodyPage'>
+
+          <br /><span className='text-2xl md:text-3xl'>{t('videoText1')}</span>
+          <br /><span className='text-2xl md:text-3xl'>
+          <span className='text-2xl md:text-3xl'>مع</span>
+          <br />
+           <span className='text-3xl siteTitle'>{t('site')}
+           </span>
+           <br />
+           </span>
+          <br /><span className='text-2xl md:text-3xl'>جبنالك المدرب لغاية عندك في كورس تفاعلي أونلاين 
+          </span>
+          <br />
+          <br />
+          <span className='text-2xl md:text-3xl'>تقدر تتواصل فيه مع المدرب مباشرة 
+          </span>
           <br />
           <br />
           <br /><span className='text-2xl md:text-4xl'>{t('videoText4')}</span>
-
+          
 
     {/* VIDEO */}
-       <iframe className='m-auto mt-10 w-72 h-64 md:w-3/4 md:h-1/2' width="300" height="400" src="https://www.youtube.com/embed/1s_QGiK-8JM?si=5zX3j1i3y7jfWxEZ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-
-
-       <div className='mt-4 mb-5 max-w-100 m-auto'>
-       
-        <br></br>
-        <span className='text-2xl md:text-3xl mb-2'> {t('site')}</span>
+  <section className='mt-10 flex items-center justify-center'>
+       <iframe className='' width="800" height="400" src="https://www.youtube.com/embed/1s_QGiK-8JM?si=5zX3j1i3y7jfWxEZ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+       </section>
+        <br />
+        <span className='text-2xl md:text-3xl mb-2 siteTitle'> {t('site')}</span>
           <br /><span className='text-2xl md:text-3xl'>{t('desc2')}</span>
           <br /><span className='text-2xl md:text-3xl'>{t('desc3')}</span>
           
@@ -72,7 +85,7 @@ const l = useTranslations('Logos')
           <br /><span className='text-2xl md:text-3xl'>{t('desc4')}</span>
           <br /><span className='text-2xl md:text-3xl' >{t('desc5')}</span>
           <br /><span className='text-2xl md:text-3xl'></span>
-          </div>
+          
           <h1 className='text-2xl mb-3'>Coming Soon</h1>
    
   {/* nav buttons */}
@@ -80,10 +93,9 @@ const l = useTranslations('Logos')
 
   {/* Signup Nav */}
 <Signup />
-
       </div>
     </div>
   
-    
+    </>
   );
 }

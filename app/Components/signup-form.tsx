@@ -13,6 +13,7 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 
 
 
+
 export default function StudentSignup() {
 
     const [number, setNumber]:any = React.useState('')
@@ -43,7 +44,7 @@ if(number.length < 7) {
 //onSubmit
 const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
     try {
-      const response = await fetch('https://3amalycourses.com/ar/api/send/route', {
+      const response = await fetch('https://3amalycourses.com/ar/api/send', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -133,7 +134,7 @@ const {
       
        {/* Phone number */}
      
-     <label className=''>الرقم (مع رقم البلد)</label>
+     <label className=''>رقم الوتساب </label>
 <PhoneInput
 country='eg'
 value={number}
