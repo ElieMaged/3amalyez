@@ -73,7 +73,7 @@ const l = useTranslations('Logos')
           <br /><span className='text-2xl md:text-3xl' >{t('desc5')}</span>
           <br /><span className='text-2xl md:text-3xl'></span>
           </div>
-       <h1 className='text-2xl mb-3'>Coming Soon</h1>
+          <h1 className='text-2xl mb-3'>Coming Soon</h1>
    
   {/* nav buttons */}
 

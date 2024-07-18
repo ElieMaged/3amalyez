@@ -33,7 +33,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: 'Data added successfully', data: response.data }, { status: 200 });
   } catch (error) {
-    console.error('Error in /api/mentor:', error);
+    console.error('Error in /api/send:', error);
     return NextResponse.json({ message: 'Internal server error'}, { status: 500 });
   }
 }
