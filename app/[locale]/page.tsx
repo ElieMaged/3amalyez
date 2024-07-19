@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import {unstable_setRequestLocale} from 'next-intl/server';
 import Image from 'next/image'
 import Signup from '@/app/Components/signup-form'
+import {Odibee_Sans} from 'next/font/google'
 
 
 
@@ -13,7 +14,10 @@ import Signup from '@/app/Components/signup-form'
 
 
 export default function Home({Component, pageProps, params:{locale}}:any) {
-
+  //Font
+  const odibeeSansStyle = {
+    fontFamily: "'Odibee Sans', cursive"
+  };
  
 
   // translation for nav
@@ -27,37 +31,51 @@ const l = useTranslations('Logos')
 // page text yay
 <>
 <body className='entirePage'>
-  <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center">
+  <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center ">
       <div className=''>
+<section className='leading-10'>
 
-          <br /><span className='text-2xl md:text-3xl text-white'>{t('videoText1')}</span>
-          <br /><span className='text-2xl md:text-3xl text-white'>
-          <span className='text-2xl md:text-3xl text-white'>مع</span>
+        <br />
+
+        <span className='text-2xl md:text-3xl text-white'>{t('videoText1')}</span>
+
+         <span className='text-2xl md:text-3xl text-white'>
+
           <br />
-           <span className='text-3xl siteTitle text-white'>{t('site')}
+
+          <span className='text-2xl md:text-3xl text-white'>مع</span>
+
+          <br />
+
+           <span className='text-4xl  text-white odibee' style={odibeeSansStyle}>{t('site')}
            </span>
+           
            <br />
+           
            </span>
           <br /><span className='text-2xl md:text-3xl text-white'>جبنالك المدرب لغاية عندك في كورس تفاعلي أونلاين 
           </span>
-          <br />
+        
           <br />
           <span className='text-2xl md:text-3xl text-white'>تقدر تتواصل فيه مع المدرب مباشرة 
           </span>
           <br />
           <br />
           <br /><span className='text-2xl md:text-4xl pinkText'>{t('videoText4')}</span>
-          
+          </section>
 
     {/* VIDEO */}
   <section className='mt-10 flex items-center justify-center'>
        <iframe className='' width="800" height="400" src="https://www.youtube.com/embed/1s_QGiK-8JM?si=5zX3j1i3y7jfWxEZ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
        </section>
+
+       {/* //Text */}
         <br />
-        <span className='text-2xl md:text-3xl mb-2 siteTitle'> {t('site')}</span>
+        <section className='leading-10'>
+        <span className='text-3xl md:text-4xl' style={odibeeSansStyle}> {t('site')}</span>
           <br /><span className='text-2xl md:text-3xl'>{t('desc2')}</span>
           <br /><span className='text-2xl md:text-3xl'>{t('desc3')}</span>
-          
+          </section>
   {/* svgs and text */}
 <div className="container md:flex md:flex-row md:space-x-40 m-auto justify-center mt-10 mb-5">
   <span className='text-xl'>
@@ -80,14 +98,14 @@ const l = useTranslations('Logos')
 </div>
 
   {/* Second description */}
-
-          <br /><span className='text-2xl md:text-3xl'>{t('or')}</span> 
+  <div className='leading-10	'>
+         <span className='text-2xl md:text-3xl'>{t('or')}</span> 
           <br />
           <br /><span className='text-2xl md:text-3xl'>{t('desc4')}</span>
           <br /><span className='text-2xl md:text-3xl' >{t('desc5')}</span>
-          <br /><span className='text-2xl md:text-3xl'></span>
-          
-          <h1 className='text-2xl mb-3'>Coming Soon</h1>
+          <br /><span className='text-2xl md:text-3xl '></span>
+          </div>
+          <h1 className='text-3xl mb-3 mt-7' style={odibeeSansStyle}>Coming Soon</h1>
    
   {/* nav buttons */}
 
