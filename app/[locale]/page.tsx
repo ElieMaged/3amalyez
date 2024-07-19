@@ -4,7 +4,9 @@ import { useTranslations } from 'next-intl'
 import {unstable_setRequestLocale} from 'next-intl/server';
 import Image from 'next/image'
 import Signup from '@/app/Components/signup-form'
-import {Odibee_Sans} from 'next/font/google'
+import { Roboto } from 'next/font/google'
+
+// import {Odibee_Sans} from 'next/font/google'
 
 
 
@@ -15,9 +17,7 @@ import {Odibee_Sans} from 'next/font/google'
 
 export default function Home({Component, pageProps, params:{locale}}:any) {
   //Font
-  const odibeeSansStyle = {
-    fontFamily: "'Odibee Sans', cursive"
-  };
+
  
 
   // translation for nav
@@ -30,7 +30,13 @@ const l = useTranslations('Logos')
   return (
 // page text yay
 <>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
+
+
 <body className='entirePage'>
+  
   <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center ">
       <div className=''>
 <section className='leading-10'>
@@ -47,7 +53,7 @@ const l = useTranslations('Logos')
 
           <br />
 
-           <span className='text-4xl  text-white odibee' style={odibeeSansStyle}>{t('site')}
+           <span className='text-4xl  text-white saira' >{t('site')}
            </span>
            
            <br />
@@ -72,7 +78,7 @@ const l = useTranslations('Logos')
        {/* //Text */}
         <br />
         <section className='leading-10'>
-        <span className='text-3xl md:text-4xl' style={odibeeSansStyle}> {t('site')}</span>
+        <span className='text-3xl md:text-4xl saira'> {t('site')}</span>
           <br /><span className='text-2xl md:text-3xl'>{t('desc2')}</span>
           <br /><span className='text-2xl md:text-3xl'>{t('desc3')}</span>
           </section>
@@ -105,7 +111,7 @@ const l = useTranslations('Logos')
           <br /><span className='text-2xl md:text-3xl' >{t('desc5')}</span>
           <br /><span className='text-2xl md:text-3xl '></span>
           </div>
-          <h1 className='text-3xl mb-3 mt-7' style={odibeeSansStyle}>Coming Soon</h1>
+          <h1 className='text-3xl mb-3 mt-7 saira' >Coming Soon</h1>
    
   {/* nav buttons */}
 
