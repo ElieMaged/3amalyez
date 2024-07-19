@@ -26,27 +26,27 @@ const l = useTranslations('Logos')
   return (
 // page text yay
 <>
+<body className='entirePage'>
+  <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center">
+      <div className=''>
 
-  <div className="max-w-64 md:max-w-full m-auto md:flex md:flex-row text-center justify-center entirePage">
-      <div className='bodyPage'>
-
-          <br /><span className='text-2xl md:text-3xl'>{t('videoText1')}</span>
-          <br /><span className='text-2xl md:text-3xl'>
-          <span className='text-2xl md:text-3xl'>مع</span>
+          <br /><span className='text-2xl md:text-3xl text-white'>{t('videoText1')}</span>
+          <br /><span className='text-2xl md:text-3xl text-white'>
+          <span className='text-2xl md:text-3xl text-white'>مع</span>
           <br />
-           <span className='text-3xl siteTitle'>{t('site')}
+           <span className='text-3xl siteTitle text-white'>{t('site')}
            </span>
            <br />
            </span>
-          <br /><span className='text-2xl md:text-3xl'>جبنالك المدرب لغاية عندك في كورس تفاعلي أونلاين 
+          <br /><span className='text-2xl md:text-3xl text-white'>جبنالك المدرب لغاية عندك في كورس تفاعلي أونلاين 
           </span>
           <br />
           <br />
-          <span className='text-2xl md:text-3xl'>تقدر تتواصل فيه مع المدرب مباشرة 
+          <span className='text-2xl md:text-3xl text-white'>تقدر تتواصل فيه مع المدرب مباشرة 
           </span>
           <br />
           <br />
-          <br /><span className='text-2xl md:text-4xl'>{t('videoText4')}</span>
+          <br /><span className='text-2xl md:text-4xl pinkText'>{t('videoText4')}</span>
           
 
     {/* VIDEO */}
@@ -95,7 +95,7 @@ const l = useTranslations('Logos')
 <Signup />
       </div>
     </div>
-  
+    </body>
     </>
   );
 }
