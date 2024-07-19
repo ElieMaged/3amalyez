@@ -96,7 +96,7 @@ background-color: #c9c9c9;
 
     @media(max-width:768px) {
       .entirePage {
-        background: linear-gradient(#311d3f 49.6%, transparent 40%) no-repeat;
+        background: linear-gradient(#311d3f 50.6%, transparent 40%) no-repeat;
       }
       }
 
