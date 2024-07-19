@@ -72,7 +72,8 @@ const l = useTranslations('Logos')
 
     {/* VIDEO */}
   <section className='mt-10 flex items-center justify-center'>
-       <iframe className='' width="800" height="400" src="https://www.youtube.com/embed/1s_QGiK-8JM?si=5zX3j1i3y7jfWxEZ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+
+       <iframe className='' width="800" height="400" src="https://www.youtube-nocookie.com/embed/1s_QGiK-8JM?si=TSWIRb9fExn55u_e&amp;controls=0" title="YouTube video player"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
        </section>
 
        {/* //Text */}
