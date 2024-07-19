@@ -74,19 +74,30 @@ background-color: #c9c9c9;
 
   }
 }
+/* //mobile */
 @media(max-width:768px){
   .video-3am {
-    width:500px;
-    height:315px;
+
+    width:600px;
+    height:200px;
+
   } 
 }
 @media(min-width:768px) {
   .video-3am {
-    width:1000px;
+    width:600px;
     height:550px;
   }
   }
-
+  @media(max-width:768px){
+  iframe[src*=youtube] {
+    display: block;
+    margin: 0 auto;
+    width: 50rem;
+    height:11.1rem;
+    padding-bottom: 10px;
+}
+}
   .saira {
     font-family: "Saira", sans-serif;
     font-weight: 400;
@@ -96,7 +107,7 @@ background-color: #c9c9c9;
 
     @media(max-width:768px) {
       .entirePage {
-        background: linear-gradient(#311d3f 50.6%, transparent 40%) no-repeat;
+        background: linear-gradient(#311d3f 44.78%, transparent 40%) no-repeat;
       }
       }
 
