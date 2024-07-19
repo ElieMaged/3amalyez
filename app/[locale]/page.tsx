@@ -85,7 +85,7 @@ const l = useTranslations('Logos')
           <br /><span className='text-2xl md:text-3xl'>{t('desc3')}</span>
           </section>
   {/* svgs and text */}
-<div className="container md:flex md:flex-row md:space-x-40 m-auto justify-center mt-10 mb-5">
+<div className="container md:flex md:flex-row md:space-x-40 m-auto justify-center mt-10 mb-1">
   <span className='text-xl'>
   <svg className='fill-yellow-900 m-auto mb-1.5' xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32"><path d="M31.835 9.233 27.464.875C27.209.388 26.549-.011 26-.011H15.94l-.033-.004c-.009 0-.018.003-.027.004H6c-.55 0-1.211.398-1.47.883L.171 9.069c-.259.486-.207 1.248.113 1.696l15.001 20.911c.161.224.375.338.588.338.212 0 .424-.11.587-.331l15.247-20.758c.325-.444.383-1.204.128-1.691zm-2.386-.245h-5.358l2.146-6.144zM17.979 1.99h6.436l-1.997 5.716zm2.903 6.998h-9.301l4.396-6.316zM9.809 8.034 7.803 1.99h6.213zm11.464 2.954L15.897 26.38l-5.108-15.392h10.484zm-7.619 14.983L2.906 10.988h5.776zm9.738-14.983h5.787l-11.03 15.018zM5.89 2.575l2.128 6.413H2.479z"/></svg>
 
