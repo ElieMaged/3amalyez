@@ -35,7 +35,6 @@ export default async function RootLayout({
   return (     
 
     <html lang={locale} className={alexandria.className}>  
-   
       <body>
        <NextIntlClientProvider messages={messages}>
         <Nav />
