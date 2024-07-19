@@ -59,11 +59,11 @@ const l = useTranslations('Logos')
            <br />
            
            </span>
-          <br /><span className='text-2xl md:text-3xl text-white'>جبنالك المدرب لغاية عندك في كورس تفاعلي أونلاين 
+          <br /><span className='text-2xl md:text-3xl text-white'>جبنالك المعلم لغاية عندك في كورس تفاعلي أونلاين 
           </span>
         
           <br />
-          <span className='text-2xl md:text-3xl text-white'>تقدر تتواصل فيه مع المدرب مباشرة 
+          <span className='text-2xl md:text-3xl text-white'>تقدر تتواصل فيه مع المعلم مباشرة 
           </span>
           <br />
           <br />
