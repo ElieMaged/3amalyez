@@ -72,9 +72,9 @@ const l = useTranslations('Logos')
 
     {/* VIDEO */}
   <section className='mt-10 flex items-center justify-center'>
+  <iframe src="https://player.vimeo.com/video/987263961?h=600231dfce&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="703" height="395" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="3amaly_Courses"></iframe>
 
-       <iframe className='' width="700" height="395" src="https://www.youtube-nocookie.com/embed/1s_QGiK-8JM?si=TSWIRb9fExn55u_e&amp;controls=0" title="YouTube video player"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-       </section>
+      </section>
 
        {/* //Text */}
         <br />
