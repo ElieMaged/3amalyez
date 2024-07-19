@@ -71,7 +71,7 @@ const l = useTranslations('Logos')
           </section>
 
     {/* VIDEO */}
-  <section className='md:mt-10 flex items-center justify-center'>
+  <section className='mt-10 flex items-center justify-center'>
   <iframe allow="fullscreen"  height="395" src="https://streamable.com/e/jbaebz?loop=0&nocontrols=1" width="700" ></iframe>
   {/* <iframe src="https://player.vimeo.com/video/987263961?h=600231dfce&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="703" height="395" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="3amaly_Courses"></iframe> */}
 

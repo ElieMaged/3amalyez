@@ -90,7 +90,7 @@ background-color: #c9c9c9;
   }
   }
   @media(max-width:768px){
-  iframe[src*=vimeo] {
+  iframe {
     display: block;
     margin: 0 auto;
     width: 50rem;
