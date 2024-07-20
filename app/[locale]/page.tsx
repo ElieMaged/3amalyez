@@ -107,8 +107,10 @@ const l = useTranslations('Logos')
 
   {/* Second description */}
   <div className='leading-10	'>
+  <br />
          <span className='text-2xl md:text-3xl'>{t('or')}</span> 
-          <br />
+         <br />
+         
           <br /><span className='text-2xl md:text-3xl'>{t('desc4')}</span>
           <br /><span className='text-2xl md:text-3xl' >{t('desc5')}</span>
           <br /><span className='text-2xl md:text-3xl '></span>
