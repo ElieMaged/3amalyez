@@ -17,22 +17,13 @@ import {
   type ContactFormEmailProps = {
     firstLast: string;
     email: string;
-    countryCode: any;
-    phoneNumber: any;
-    expertise: string;
-    years: any;
-    languages: string;
-    price: any;
-    introVid: string;
-    country: string;
-
   }
-  export default function studentStyle({firstLast, email, countryCode, phoneNumber, expertise, years, languages, price, introVid, country }:ContactFormEmailProps) {
+  export default function studentStyle({firstLast, email }:ContactFormEmailProps) {
     return(
         <Html>
           <Head
           />
-          <Preview>Student Signup!</Preview>
+          <Preview>Mentor Signup!</Preview>
           <Tailwind>
             <Body className='bg-gray-100'>
               <Container>
@@ -44,22 +35,9 @@ import {
                     Mentor Signup!
                   </Heading>
                     <Text>
-                    My name is: {firstLast}
-                     <br />
-                    I am an expert in {expertise} for {years} years
-                    <br />
-                    I can speak {languages}
-                    <br/> 
-                    My price per session is {price} USD
-                    <br />
-                    The link to my youtube intro is {introVid}
-                    <br />
-                    I am from {country}
+                  Hello there {firstLast}, Please fill out the following application
                     <Hr />
-                    <Heading>Contact Info</Heading>
-                    my email is: {email}
                     <br />
-                    My number is ({countryCode}) {phoneNumber}
                     </Text>
                     <Img src='https://i.imgur.com/kCC7QtS.png' height='' width='100' className='mb-5'/>
                 </Section>
