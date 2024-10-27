@@ -1,11 +1,9 @@
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-import {getMessages} from 'next-intl/server';
-import { useTranslations } from 'next-intl'
+
 
 
 
 export default function Nav() {
-  const t = useTranslations('Switcher')
     return(
         <>
         
@@ -25,7 +23,6 @@ export default function Nav() {
     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 navy">
        <button> <li>
-          {t('lang')}
           </li>
           </button>
         <li>
