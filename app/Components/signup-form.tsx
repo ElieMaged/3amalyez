@@ -43,7 +43,7 @@ if(number.length < 7) {
 //onSubmit
 const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
     try {
-      const response = await fetch('https://3amalycourses.com/api/send', {
+      const response = await fetch('/api/send', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -55,9 +55,18 @@ const onSubmit: SubmitHandler<FormFields> = async (data:FieldValues) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
+ 
       const dataStuff = await response.json();
      console.log({...data, number})
+     const sendEmail = async () => {
+      const apiKey = process.env.RESEND_API_KEY
+      const mail = await fetch('https://api.resend.com', {
+        method: 'POST',
+        headers:{
+          Authorization: `Bearer ${apiKey}`
+        }
+      })
+     }
       setNumber('')
       reset();
       alert(`تم تسجيل ردك بنجاح في عملي كورسز 
