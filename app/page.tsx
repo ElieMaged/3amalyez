@@ -74,7 +74,7 @@ export default function Home({Component, pageProps}:any) {
         <section className='leading-10'>
         <span className='text-3xl md:text-4xl saira'> 3amaly Courses</span>
           <br /><span className='text-2xl md:text-3xl'>!سيتم إطلاقه قريبًا</span>
-          <br /><span className='text-2xl md:text-3xl'>"انضم كطالب لتتعلم مباشرة من الأفضل</span>
+          <br /><span className='text-2xl md:text-3xl'>انضم كطالب لتتعلم مباشرة من الأفضل</span>
           </section>
   {/* svgs and text */}
 <div className="container md:flex md:flex-row md:space-x-40 m-auto justify-center mt-10 mb-1">
